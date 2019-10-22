@@ -1,6 +1,6 @@
-
 How do I enable Memory Utilization using custom CloudWatch Metrics for my Elastic Beanstalk Windows Environment
 Main Text
+========
 
 Short Description:
 ========
@@ -10,15 +10,13 @@ Configure custom CloudWatch metrics for the Elastic Beanstalk platform ".NET on 
 By default, the CloudWatch agent is installed on all Elastic Beanstalk Windows Environments running Platform Versions 2.0.1 or newer.  We will use .ebextensions to deploy configuration files to enable  Custom CloudWatch Metrics to measure Memory utilization.
 
 Resolution:
-
 =========
 
 You can create powershell scripts to configure the instance to start streaming memory metrics to CloudWatch . Please take note of the below:
 
 Set up your .ebextensions directory
- 
 
-1.    In the root of your application bundle, create a hidden directory named .ebextensions.
+1. In the root of your application bundle, create a hidden directory named .ebextensions.
 
 Your application source bundle should look similar to the following example:
 
@@ -33,7 +31,7 @@ Your application source bundle should look similar to the following example:
 
 --------------
 
-2.    Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
+2. Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
 
 2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
 
@@ -117,6 +115,6 @@ At this point your application source bundle should look similar to the followin
 --------------
 
 
-3.  Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
+3. Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
 
-4.  After the deployment is successful, You should start seeing memory metrics on the CloudWatch Console under Metrics section with Custom Namespace "CWAgent". 
+4. After the deployment is successful, You should start seeing memory metrics on the CloudWatch Console under Metrics section with Custom Namespace "CWAgent". 
