@@ -118,3 +118,5 @@ At this point your application source bundle should look similar to the followin
 3. Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
 
 4. After the deployment is successful, You should start seeing memory metrics on the CloudWatch Console under Metrics section with Custom Namespace "CWAgent". 
+
+Please refer:
