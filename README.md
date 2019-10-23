@@ -1,7 +1,7 @@
 How do I enable Memory Utilization using custom CloudWatch Metrics for my Elastic Beanstalk Windows Environment
 ========
 
-Short Description
+Short Description:
 ========
 
 Configure custom CloudWatch metrics for the Elastic Beanstalk platform ".NET on Windows Server with IIS" using Elastic Beanstalk configuration files (.ebextensions).
@@ -108,7 +108,7 @@ At this point your application source bundle should look similar to the followin
 |   `-- cw-memory-config.json
 |  
 |-- archive.xml
-
+|
 `-- systemInfo.xml
 
 --------------
@@ -118,4 +118,4 @@ At this point your application source bundle should look similar to the followin
 
 4. After the deployment is successful, You should start seeing memory metrics on the CloudWatch Console under Metrics section with Custom Namespace "CWAgent". 
 
-Please refer:
+Please refer to GitHub page for source files.
