@@ -1,0 +1,18 @@
+{
+    "metrics": {
+        "append_dimensions": {
+            "AutoScalingGroupName": "${aws:AutoScalingGroupName}",
+            "ImageId": "${aws:ImageId}",
+            "InstanceId": "${aws:InstanceId}",
+            "InstanceType": "${aws:InstanceType}"
+        },
+        "metrics_collected": {
+            "Memory": {
+                "measurement": [
+                    "% Committed Bytes In Use"
+                ],
+                "metrics_collection_interval": 10
+            }
+        }
+    }
+}

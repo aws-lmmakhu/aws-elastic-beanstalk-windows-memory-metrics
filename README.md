@@ -1,8 +1,7 @@
 How do I enable Memory Utilization using custom CloudWatch Metrics for my Elastic Beanstalk Windows Environment
-Main Text
 ========
 
-Short Description:
+Short Description
 ========
 
 Configure custom CloudWatch metrics for the Elastic Beanstalk platform ".NET on Windows Server with IIS" using Elastic Beanstalk configuration files (.ebextensions).
