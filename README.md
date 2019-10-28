@@ -17,14 +17,14 @@ Set up your .ebextensions directory
 
     Your application source bundle should look similar to the following example:
 
-``` 
-    ~/workspace/my-application/
-    |-- Content
-    |-- .ebextensions
-    |  
-    |-- archive.xml
-    `-- systemInfo.xml
-```        
+    ``` 
+        ~/workspace/my-application/
+        |-- Content
+        |-- .ebextensions
+        |  
+        |-- archive.xml
+        `-- systemInfo.xml
+    ```        
 
 2. Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
 
