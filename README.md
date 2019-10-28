@@ -82,7 +82,7 @@ Set up your .ebextensions directory
 
 
   At this point your application source bundle should look similar to the following example:
-
+    ```
         ~/workspace/my-application/
         |-- Content
         |-- .ebextensions
@@ -93,7 +93,7 @@ Set up your .ebextensions directory
         |  
         |-- archive.xml
         `-- systemInfo.xml
-
+    ```
 
 3. Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
 
