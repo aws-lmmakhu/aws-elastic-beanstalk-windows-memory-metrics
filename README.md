@@ -17,23 +17,20 @@ Set up your .ebextensions directory
 
   Your application source bundle should look similar to the following example:
 
-        ```
-
+        
         ~/workspace/my-application/
         |-- Content
         |-- .ebextensions
         |  
         |-- archive.xml
         `-- systemInfo.xml
-
-        ```
+        
 
 2. Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
 
     2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
 
-            ```
-
+            
             {
                 "metrics": {
                     "append_dimensions": {
@@ -53,32 +50,25 @@ Set up your .ebextensions directory
                 }
             }
 
-            ```
-
 
       2.2 Create a file called "copy-cloud-watch-config-script.ps1" and paste the below content in the file . This file copies the CloudWatch agent configuration file to the CloudWatch directory.
 
-            ```
 
             copy-item -path "C:\staging\.ebextensions\cw-memory-config.json" -destination "C:\Program Files\Amazon\AmazonCloudWatchAgent\cw-memory-config.json"
             exit
 
-            ```
 
       2.3  Create a file called "cloud-watch-memory-script.ps1" and paste the below content in the file. This file will be used to execute the CloudWatch agent by using the settings in the CloudWatch configuration file and then start the agent
 
-            ```
 
             cd "C:\\Program Files\\Amazon\\AmazonCloudWatchAgent"     
             ./amazon-cloudwatch-agent-ctl.ps1 -a -config -m ec2 -c file:cw-memory-config.json -s
             ./amazon-cloudwatch-agent-ctl.ps1 -a start
             exit
 
-            ```
 
       2.4  Create a file called "01_cwmemory.config" and paste the below content in the file. This file will be used by elastic beanstalk to execute the scripts on the instance running in the environment.
 
-            ```
 
             container_commands:
             01_copy_config_file_script:
@@ -90,12 +80,8 @@ Set up your .ebextensions directory
                 ignoreErrors: false
                 waitAfterCompletion: 10
 
-            ```
-
 
 At this point your application source bundle should look similar to the following example:
-
-            ```
 
             ~/workspace/my-application/
             |-- Content
@@ -108,8 +94,6 @@ At this point your application source bundle should look similar to the followin
             |-- archive.xml
 
             `-- systemInfo.xml
-
-            ```
 
 
 3. Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
