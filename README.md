@@ -30,7 +30,7 @@ Set up your .ebextensions directory
 
 2. Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
 
-  2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
+    2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
 
             ```
 
