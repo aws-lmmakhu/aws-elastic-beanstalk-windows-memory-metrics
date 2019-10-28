@@ -17,7 +17,8 @@ Set up your .ebextensions directory
 
     Your application source bundle should look similar to the following example:
 
-``` ~/workspace/my-application/
+``` 
+    ~/workspace/my-application/
     |-- Content
     |-- .ebextensions
     |  
