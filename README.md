@@ -61,7 +61,7 @@ Set up your .ebextensions directory
       2.3  Create a file called "cloud-watch-memory-script.ps1" and paste the below content in the file. This file will be used to execute the CloudWatch agent by using the settings in the CloudWatch configuration file and then start the agent
 
     ```
-        cd "C:\\Program Files\\Amazon\\AmazonCloudWatchAgent"     
+        Set-Location "C:\\Program Files\\Amazon\\AmazonCloudWatchAgent"     
         ./amazon-cloudwatch-agent-ctl.ps1 -a -config -m ec2 -c file:cw-memory-config.json -s
         ./amazon-cloudwatch-agent-ctl.ps1 -a start
         exit
