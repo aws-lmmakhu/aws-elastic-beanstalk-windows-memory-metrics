@@ -77,11 +77,11 @@ Set up your .ebextensions directory
             waitAfterCompletion: 10
           02_cw_excute_memory_script:
             command: powershell.exe -ExecutionPolicy Bypass -File C:\\staging\\.ebextensions\\cloud-watch-memory-script.ps1
-       ignoreErrors: false
-       waitAfterCompletion: 10
+            ignoreErrors: false
+            waitAfterCompletion: 10
 
 
-  At this point your application source bundle should look similar to the following example:
+    At this point your application source bundle should look similar to the following example:
 
 
         ~/workspace/my-application/
