@@ -82,6 +82,7 @@ Set up your .ebextensions directory
 
 
   At this point your application source bundle should look similar to the following example:
+  
     ```
         ~/workspace/my-application/
         |-- Content
