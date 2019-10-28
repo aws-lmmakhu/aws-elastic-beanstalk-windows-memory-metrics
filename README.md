@@ -15,7 +15,7 @@ Set up your .ebextensions directory
 
 1. In the root of your application bundle, create a hidden directory named .ebextensions.
 
-        Your application source bundle should look similar to the following example:
+  Your application source bundle should look similar to the following example:
 
         ```
 
@@ -30,7 +30,7 @@ Set up your .ebextensions directory
 
 2. Create and store the configuration files and PowerShell scripts in the .ebextensions directory.
 
-        2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
+  2.1  Create a file called "cw-memory-config.json" and paste the below content in the file. This file is the CloudWatch configuration file used to specify the metrics that the CloudWatch agent is to collect and push to CloudWatch. The configuration will collect the metrics for percentage(%) of memory used.
 
             ```
 
@@ -56,7 +56,7 @@ Set up your .ebextensions directory
             ```
 
 
-        2.2 Create a file called "copy-cloud-watch-config-script.ps1" and paste the below content in the file . This file copies the CloudWatch agent configuration file to the CloudWatch directory.
+      2.2 Create a file called "copy-cloud-watch-config-script.ps1" and paste the below content in the file . This file copies the CloudWatch agent configuration file to the CloudWatch directory.
 
             ```
 
@@ -65,7 +65,7 @@ Set up your .ebextensions directory
 
             ```
 
-        2.3  Create a file called "cloud-watch-memory-script.ps1" and paste the below content in the file. This file will be used to execute the CloudWatch agent by using the settings in the CloudWatch configuration file and then start the agent
+      2.3  Create a file called "cloud-watch-memory-script.ps1" and paste the below content in the file. This file will be used to execute the CloudWatch agent by using the settings in the CloudWatch configuration file and then start the agent
 
             ```
 
@@ -76,7 +76,7 @@ Set up your .ebextensions directory
 
             ```
 
-        2.4  Create a file called "01_cwmemory.config" and paste the below content in the file. This file will be used by elastic beanstalk to execute the scripts on the instance running in the environment.
+      2.4  Create a file called "01_cwmemory.config" and paste the below content in the file. This file will be used by elastic beanstalk to execute the scripts on the instance running in the environment.
 
             ```
 
