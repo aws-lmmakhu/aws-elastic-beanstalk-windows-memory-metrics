@@ -70,30 +70,30 @@ Set up your .ebextensions directory
       2.4  Create a file called "01_cwmemory.config" and paste the below content in the file. This file will be used by elastic beanstalk to execute the scripts on the instance running in the environment.
 
 
-            container_commands:
-            01_copy_config_file_script:
-                command: powershell.exe -ExecutionPolicy Bypass -File C:\\staging\\.ebextensions\\copy-cloud-watch-config-script.ps1
-                ignoreErrors: false
-                waitAfterCompletion: 10
-            02_cw_excute_memory_script:
-                command: powershell.exe -ExecutionPolicy Bypass -File C:\\staging\\.ebextensions\\cloud-watch-memory-script.ps1
-                ignoreErrors: false
-                waitAfterCompletion: 10
+        container_commands:
+          01_copy_config_file_script:
+            command: powershell.exe -ExecutionPolicy Bypass -File C:\\staging\\.ebextensions\\copy-cloud-watch-config-script.ps1
+            ignoreErrors: false
+            waitAfterCompletion: 10
+          02_cw_excute_memory_script:
+            command: powershell.exe -ExecutionPolicy Bypass -File C:\\staging\\.ebextensions\\cloud-watch-memory-script.ps1
+            ignoreErrors: false
+            waitAfterCompletion: 10
 
 
-At this point your application source bundle should look similar to the following example:
+  At this point your application source bundle should look similar to the following example:
 
-            ~/workspace/my-application/
-            |-- Content
-            |-- .ebextensions
-            |   |--01_cwmemory.config
-            |   |-- cloud-watch-memory-script.ps1
-            |   |-- copy-cloud-watch-config-script.ps1
-            |   `-- cw-memory-config.json
-            |  
-            |-- archive.xml
+        ~/workspace/my-application/
+        |-- Content
+        |-- .ebextensions
+        |   |--01_cwmemory.config
+        |   |-- cloud-watch-memory-script.ps1
+        |   |-- copy-cloud-watch-config-script.ps1
+        |   `-- cw-memory-config.json
+        |  
+        |-- archive.xml
 
-            `-- systemInfo.xml
+        `-- systemInfo.xml
 
 
 3. Deploy your updated Elastic Beanstalk application. For more details in regards to Elastic Beanstalk Windows Environments. Please refer to documentation here:
